@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function getWeekDay(inputDate){
+    var days=["Sunday","Monday","Tuesday","Wednesday","THursday","Friday","Saturday"]
+    var date=new Date(inputDate);
+    //display the day of the week for the current date.
+    document.write(days[new Date().getDay()]);
+    //returns the day of the week for that date
+    return days[date.getDay()]; 
+}
+    //example
+    getWeekDay("2023-06-15");
+</script>
+</html>

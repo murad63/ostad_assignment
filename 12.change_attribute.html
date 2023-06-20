@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Change Attribute Value Example</title>
+</head>
+<body>
+  <h2>DOM Change Attribute Value Example</h2>
+  <img id="myImage" src="https://cdn.ostad.app/public/upload/2023-05-07T04-25-42.808Z-app-banner-windows.png" alt="Initial Image">
+  <br>
+  <button onclick="changeImageSource()">Change Image Source</button>
+</body>
+<script>
+    function changeImageSource() {
+      var image = document.getElementById("myImage");
+      image.src = "https://cdn.ostad.app/public/upload/2023-05-07T04-25-19.735Z-app-banner-android.png";
+    }
+  </script>
+</html>

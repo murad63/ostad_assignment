@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function detectBrowser() {
+  var userAgent = navigator.userAgent;
+  var browserName;
+  var browserVersion;
+
+  // Detect browser name and version
+  if (userAgent.indexOf("Opera") !== -1 || userAgent.indexOf("OPR") !== -1) {
+    browserName = "Opera";
+    browserVersion = userAgent.indexOf("OPR") !== -1 ? userAgent.substring(userAgent.indexOf("OPR") + 4) : userAgent.substring(userAgent.indexOf("Opera") + 6);
+  } else if (userAgent.indexOf("Edg") !== -1) {
+    browserName = "Microsoft Edge";
+    browserVersion = userAgent.substring(userAgent.indexOf("Edg") + 4);
+  } else if (userAgent.indexOf("Chrome") !== -1) {
+    browserName = "Google Chrome";
+    browserVersion = userAgent.substring(userAgent.indexOf("Chrome") + 7);
+  } else if (userAgent.indexOf("Safari") !== -1) {
+    browserName = "Safari";
+    browserVersion = userAgent.substring(userAgent.indexOf("Version") + 8);
+  } else if (userAgent.indexOf("Firefox") !== -1) {
+    browserName = "Mozilla Firefox";
+    browserVersion = userAgent.substring(userAgent.indexOf("Firefox") + 8);
+  } else if (userAgent.indexOf("MSIE") !== -1 || userAgent.indexOf("Trident/") !== -1) {
+    browserName = "Internet Explorer";
+    browserVersion = userAgent.indexOf("MSIE") !== -1 ? userAgent.substring(userAgent.indexOf("MSIE") + 5) : userAgent.substring(userAgent.indexOf("rv:") + 3);
+  } else {
+    browserName = "Unknown";
+    browserVersion = "Unknown";
+  }
+
+  return {
+    name: browserName,
+    version: browserVersion
+  };
+}
+var browserInfo = detectBrowser();
+document.writeln("Browser Name: " + browserInfo.name);
+document.writeln("Browser Version: " + browserInfo.version);
+</script>
+</html>

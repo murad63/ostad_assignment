@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Element & Append Element Example</title>
+  
+</head>
+<body>
+  <h2>Create Element & Append Element Example</h2>
+  <ul id="myList"></ul>
+  <button onclick="createListItems()">Create List Items</button>
+</body>
+<script>
+    function createListItems() {
+      var ul = document.getElementById("myList");
+
+      for (var i = 1; i <= 5; i++) {
+        var li = document.createElement("li");
+        li.textContent = i;
+        ul.appendChild(li);
+      }
+    }
+  </script>
+  </html>
+  

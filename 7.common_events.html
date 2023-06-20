@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Page</title>
+  <script>
+    function handleClick(event) {
+      var x = event.clientX;
+      var y = event.clientY;
+      alert("Clicked at coordinates: (" + x + ", " + y + ")");
+    }
+
+    function handleKeyPress(event) {
+      var keyCode = event.keyCode || event.which;
+      alert("Key pressed. Key code: " + keyCode);
+    }
+
+    function changeImageSource() {
+      var image = document.getElementById("myImage");
+      image.src = "https://cdn.ostad.app/public/upload/2023-05-07T04-25-42.808Z-app-banner-windows.png";
+    }
+  </script>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body onclick="handleClick(event)" onkeypress="handleKeyPress(event)">
+  <img id="myImage" src="https://cdn.ostad.app/public/upload/2023-05-07T04-25-19.735Z-app-banner-android.png" onmouseover="changeImageSource()" width="400" height="300">
+</body>
+</html>
